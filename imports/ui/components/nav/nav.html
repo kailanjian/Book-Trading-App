@@ -1,0 +1,16 @@
+<template name="nav">
+  <div class="nav-main">
+    <h1 class="nav-title"><a class="nav-title-link" href="/">Book Trader</a></h1>
+      <div class="link-row">
+      {{#if currentUser}}
+        <a class="nav-link" href="/allbooks">All Books</a>
+        <a class="nav-link" href="/mybooks">My Books</a>
+        <a class="nav-link" href="/settings">Settings</a>
+        <a class="nav-link" id="link-logout" href="#">Logout</a>
+      {{else}}      
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/signup">Sign Up</a>
+      {{/if}}
+    </div>
+  </div>
+</template>

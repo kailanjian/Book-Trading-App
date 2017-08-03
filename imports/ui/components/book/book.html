@@ -1,0 +1,15 @@
+<!-- please wrap in div.book-list when repeating-->
+<template name="book">
+  <div class="book-info-container">
+    <div class="book-info-layout">
+      <img class="img-book-preview" title="{{bookInfo.volumeInfo.title}}" src="{{bookInfo.volumeInfo.imageLinks.smallThumbnail}}" />
+      {{#if ownedByUser }}
+        {{#if isRequestable}}
+        <button type="button" class="button-request-book button-top-right"><i class="glyphicon glyphicon-refresh"></i></button>
+        {{/if}}
+      {{else}}
+        <button type="button" class="button-delete-book button-top-right"><i class="glyphicon glyphicon-remove"></i></button>
+      {{/if}}
+    </div>
+  </div>
+</template>

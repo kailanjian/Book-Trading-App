@@ -1,0 +1,38 @@
+<template name="mybooks">
+  <!-- View Trade Requests -->
+  <div class="container">
+    <div class="col-lg-12">
+    {{> trade}}
+    </div>
+    <br />
+    <div class="col-lg-12">
+      <h1 class="heading-theme">My Books</h1>
+      <h2 class="heading-theme">Add a Book</h2>
+      <form class="form-add-book">
+        <label class="label-theme" for="add-book">Add Book</label>
+        <input type="text" name="add-book" class="input-add-book input-text-theme" placeholder="Search..."/>
+        <input type="submit" class="input-button-theme" value="Add" />
+      </form>
+      {{#if books}}<h2>Results (Pick One)</h2>{{/if}}
+    </div>
+    <div class="results-list col-lg-12">
+    {{#each book in books}}
+      <img
+        class="img-result"
+        src="{{book.volumeInfo.imageLinks.smallThumbnail}}" 
+        alt="{{book.volumeInfo.title}} by {{book.volumeInfo.authors}}" 
+        title="{{book.volumeInfo.title}} by {{book.volumeInfo.authors}}"
+        index="{{@index}}"
+        />
+    {{/each}} 
+    </div>
+    <div class="col-lg-12">
+      <h2>Book List</h2>
+      <div class="book-list">
+      {{#each myBooks}}
+        {{> book }}<!-- TODO add more book info and delete buttons -->
+      {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

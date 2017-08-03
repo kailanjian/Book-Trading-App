@@ -1,0 +1,15 @@
+<template name="App_body">
+  <!-- nav -->
+  {{> nav}}
+
+  <div class="page-content">
+    <!-- Insert body of page based on routing-->
+    {{> Template.dynamic template=main}}
+  </div>
+
+  <div class="container">
+    <div class="col-lg-12 text-center">
+      {{> footer}}
+    </div>
+  </div>
+</template>

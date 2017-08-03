@@ -1,0 +1,31 @@
+<template name="trade">
+  <h1>Trade</h1>
+  <input type="button" class="button-by-user input-button-theme" value="Your trade requests ({{requestsByUser.count}})" />
+  <input type="button" class="button-for-user input-button-theme" value="Trade requests for you ({{requestsForUser.count}})" />
+  <br />
+  {{#if showByUser}}
+  <div class="by-user">
+    <h2>Trade Requests By You</h2>
+    {{#each requestsByUser}}
+      <div class="request-by-user">
+        <span>{{bookInfo.volumeInfo.title}} [{{#if isTradeApproved}}Approved!{{else}}Pending{{/if}}]</span>
+        {{#unless isTradeApproved}}<button class="button-cancel-request" title="Cancel Request">&times;</button>{{/unless}}
+      </div>
+    {{/each}}
+  </div>
+  {{/if}}
+  {{#if showForUser}}
+  <div class="for-user">
+    <h2>Trade Requests For You</h2>
+    {{#each requestsForUser}}
+      <div class="request-for-user">
+        <span>{{bookInfo.volumeInfo.title}} [{{#if isTradeApproved}}Approved!{{else}}Pending{{/if}}]</span>
+        {{#unless isTradeApproved}}
+        <button class="button-accept-request" title="Accept Request">&#10003;</button>
+        <button class="button-reject-request" title="Reject Request">&times;</button>
+        {{/unless}}
+      </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</template>

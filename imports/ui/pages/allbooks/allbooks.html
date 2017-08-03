@@ -1,0 +1,16 @@
+<template name="allbooks">
+  <div class="container">
+    <div class="col-lg-12">
+      {{> trade}}
+    </div>
+    <br />
+    <div class="col-lg-12">
+      <h1>All Books</h1>
+      <div class="book-list">
+      {{#each allBooks}}
+        {{> book}}
+      {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,101 @@
+/* global variables */
+@brown: #3C1B1F;
+@red: #B21E4B;
+@beige: #E2BF81;
+@white: #F6E1B5;
+
+/* imports */
+@import "{}/imports/ui/stylesheets/not-found.less";
+@import "{}/imports/ui/stylesheets/nav.less";
+@import "{}/imports/ui/stylesheets/mybooks.less";
+@import "{}/imports/ui/stylesheets/settings.less";
+@import "{}/imports/ui/stylesheets/book.less";
+
+
+@font-face {
+    font-family: PatuaOne; 
+    src: url("/fonts/PatuaOne-Regular.ttf"),
+}
+
+/* shared styles */
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: @white;
+}
+
+.page-content {
+  margin: 10px;
+}
+
+.main-heading {
+  color: @brown;
+}
+
+.heading-theme {
+  color: @brown;
+}
+
+.content-theme {
+  color: @brown;
+}
+
+h1 {
+  margin: 0px;
+}
+
+form {
+  margin: 5px;
+}
+
+.label-theme {
+  color: @brown;
+  font-size: 1.2em;
+  text-align: left;
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.input-text-theme {
+  border: none;
+  border-bottom: 1px dotted brown;
+  outline: none;
+  background: none;
+  color: @red;
+}
+
+.link-theme {
+  text-decoration: underline;
+  color: lighten(@brown, 15%);
+}
+
+.link-theme:hover {
+  text-decoration: underline;
+  color: @brown;
+}
+
+.link-theme:active, .link-theme:focus{
+  text-decoration: underline;
+  color: lighten(@brown, 30%);
+}
+
+.input-button-theme {
+  border: none;
+  outline: none;
+  background: none;
+  border: 2px solid @brown;
+  color: @brown;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.input-button-theme:hover, 
+.input-button-theme:active, 
+.input-button-theme:focus {
+  outline: none;
+  background: none;
+}
+
+.input-button-theme:hover {
+  color: lighten(@brown, 5%);
+}

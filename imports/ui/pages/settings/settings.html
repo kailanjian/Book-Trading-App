@@ -1,0 +1,36 @@
+<template name="settings">
+  <div class="container">
+    <div class="col-sm-12">
+      <h1 class="main-heading">Update Profile</h1>
+      <form class="form-settings">
+        <label class="label-theme label-profile" for="name">Name:</label>
+        <input type="text" name="name" class="input-name input-text-theme" placeholder="{{profile.name}}" />
+        <br />
+
+        <label class="label-theme label-profile" for="city">City:</label>
+        <input type="text" name="city" class="input-city input-text-theme" placeholder="{{profile.city}}" />
+        <br />
+
+        <label class="label-theme label-profile" for="state">State:</label>
+        <input type="text" name="state" class="input-state input-text-theme" placeholder="{{profile.state}}" />
+        <br />
+
+        <input class="input-button-theme" type="submit" value="Update"/>
+      </form>
+    </div>
+    <div class="col-sm-12">
+      <h1>Change Password</h1>
+      <form class="form-change-password">
+        <label class="label-theme label-change-password" for="old-password">Old Password:</label>
+        <input type="password" name="old-password" class="input-old-password input-text-theme" placeholder="Old Password" />
+        <br />
+        
+        <label class="label-theme label-change-password" for="new-password">New Password:</label>
+        <input type="password" name="new-password" class="input-new-password input-text-theme" placeholder="New Password" />
+        <br />
+
+        <input class="input-button-theme" type="submit" value="Update" />
+      </form>
+    </div>
+  </div>
+</template>

@@ -1,7 +1,7 @@
 import './login.html';
 
 Template.login.onCreated(function() {
-  if (!Meteor.user()) {
+  if (Meteor.user()) {
     FlowRouter.go('App.notFound');
   }
 });
